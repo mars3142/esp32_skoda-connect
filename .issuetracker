@@ -1,0 +1,7 @@
+# Integration with Issue Tracker
+#
+# (note that '\' need to be escaped).
+
+[issuetracker "Github Issues"]
+  regex = "#(\\d+)"
+  url = "https://github.com/mars3142/esp32_skoda-connect/issues/$1"
