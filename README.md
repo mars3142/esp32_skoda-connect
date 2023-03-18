@@ -1,3 +1,5 @@
+[![PlatformIO CI](https://github.com/mars3142/esp32_skoda-connect/actions/workflows/platformio.yml/badge.svg?branch=main)](https://github.com/mars3142/esp32_skoda-connect/actions/workflows/platformio.yml)
+
 # URL order
 
 1. OAuth ?
