@@ -1,13 +1,18 @@
 #include <lvgl.h>
 #include <lgfx.h>
 
+#include <skoda_connect.h>
+
 #include "main.h"
-#include "screens/splash.h"
+#include "secrets.h"
+
+#include "ui.h"
 
 #define screenWidth 480
 #define screenHeight 320
 
 LGFX tft;
+SkodaConnect skodaConnect(skoda_email, skoda_password);
 
 static lv_disp_draw_buf_t draw_buf;
 static lv_color_t buf1[screenWidth * 10];
@@ -71,9 +76,7 @@ void setup()
   lv_indev_drv_register(&indev_drv);
 
   lv_log_register_print_cb(tft_log_cb);
-
-  SplashScreen splashScreen;
-  splashScreen.init();
+  ui_init();
 }
 
 void loop()
