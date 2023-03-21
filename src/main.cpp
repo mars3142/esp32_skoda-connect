@@ -7,6 +7,7 @@
 #include "secrets.h"
 
 #include "ui.h"
+#include "widgets/time_widget.h"
 
 #define screenWidth 480
 #define screenHeight 320
@@ -77,6 +78,7 @@ void setup()
 
   lv_log_register_print_cb(tft_log_cb);
   ui_init();
+  time_widget_init();
 }
 
 void loop()
