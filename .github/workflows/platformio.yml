@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
 
@@ -24,4 +25,4 @@ jobs:
         run: pio test -e native
 
       - name: Build PlatformIO Project (WT32-SC01 Plus)
-        run: pio run -e wt32-sc01_plus
+        run: mv include/secrets_template.h include/secrets.h && pio run -e wt32-sc01_plus
