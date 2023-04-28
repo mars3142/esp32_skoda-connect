@@ -1,0 +1,3 @@
+[submodule "lib/skoda-connect-api"]
+	path = lib/skoda-connect-api
+	url = git@github.com:mars3142/skoda-connect-api.git
