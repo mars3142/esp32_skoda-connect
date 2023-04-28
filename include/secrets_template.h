@@ -1,7 +1,7 @@
 #pragma once
 
-const char *wifi_ssid = "";
-const char *wifi_password = "";
+#define WIFI_SSID "SSID"
+#define WIFI_PASSWORD "SECRET"
 
-const char *skoda_email = "";
-const char *skoda_password = "";
+#define SKODA_EMAIL "EMAIL"
+#define SKODA_PASSWORD "TOP_SECRET"
