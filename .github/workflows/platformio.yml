@@ -24,8 +24,11 @@ jobs:
       - name: Running PlatformIO Tests (native)
         run: pio test -e native
 
+      - name: setup secret configuration
+        run: mv include/secrets_template.h include/secrets.h
+
       - name: Build PlatformIO Project (WT32-SC01 Plus)
-        run: mv include/secrets_template.h include/secrets.h && pio run -e wt32-sc01_plus
+        run: pio run -e wt32-sc01_plus
 
       - name: Build PlatformIO Project (ESP32-S3 Box)
-        run: mv include/secrets_template.h include/secrets.h && pio run -e esp32-s3-box
+        run: pio run -e esp32-s3-box
