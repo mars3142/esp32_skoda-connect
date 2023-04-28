@@ -1,4 +1,4 @@
-#include "lgfx.h"
+#include "gfx/lgfx.h"
 
 LGFX::LGFX()
 {

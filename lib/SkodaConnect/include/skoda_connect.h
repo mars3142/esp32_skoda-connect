@@ -6,6 +6,7 @@ class SkodaConnect
 {
 public:
     SkodaConnect(const char *username, const char *password);
+    bool connect();
 
 private:
     const char *username;

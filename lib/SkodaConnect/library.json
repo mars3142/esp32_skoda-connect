@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
-  "name": "Skoda Connect API",
-  "description": "Library for Skoda Connect API for ESP32",
-  "version": "0.0.1",
+  "name": "SkodaConnectAPI",
+  "description": "Library for Skoda Connect API for ESP8266 & ESP32",
+  "version": "0.1.0",
   "license": "MIT",
   "authors": [
     {
@@ -16,7 +16,7 @@
     "url": "https://github.com/mars3142/esp32_skoda-connect.git"
   },
   "frameworks": "arduino",
-  "platforms": "espressif32",
+  "platforms": ["espressif32", "espressif8266"],
   "headers": "skoda_connect.h",
   "dependencies": {
     "adafruit/TinyXML": "^1.0.2",

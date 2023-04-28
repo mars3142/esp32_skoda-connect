@@ -52,7 +52,15 @@ void ui_VehicleSelection_screen_init(void)
     ui_VehicleSelection = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_VehicleSelection, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
+    time_t now;
+    struct tm timeinfo;
+    time(&now);
+    localtime_r(&now, &timeinfo);
+
     ui_Calendar = lv_calendar_create(ui_VehicleSelection);
+    lv_calendar_set_today_date(ui_Calendar, timeinfo.tm_year + 1900, timeinfo.tm_mon + 1, timeinfo.tm_mday);
+    lv_calendar_set_showed_date(ui_Calendar, timeinfo.tm_year + 1900, timeinfo.tm_mon + 1);
+
     lv_obj_t *ui_Calendar_header = lv_calendar_header_arrow_create(ui_Calendar);
     lv_obj_set_width(ui_Calendar, 230);
     lv_obj_set_height(ui_Calendar, 240);
